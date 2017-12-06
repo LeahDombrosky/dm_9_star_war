@@ -1,0 +1,26 @@
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-content: center
+  }
+
+  .people_container {
+    width: 80vw;
+    border: 1px solid black;
+  }
+
+  .entity:hover {
+    background-color: yellow;
+  }
+</style>
+
+<div class='container'>
+  <div class='people_container'>
+    <div class="entity" ui-sref='person({id:$index})' ng-repeat="entity in people">
+      {{ entity.name }}
+      <hr>
+    </div>
+  </div>
+</div>
